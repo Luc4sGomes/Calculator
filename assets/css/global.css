@@ -1,3 +1,10 @@
+:root {
+  --color-pink: #d4418e;
+  --color-blue: #0652c5;
+  --light-gray: #c2bdbddf;
+  --dark-gray: #adabab;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +12,12 @@
 }
 
 body {
-  background-color: #d4418e;
-  background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
+  background-color: var(--color-pink);
+  background-image: linear-gradient(
+    315deg,
+    var(--color-pink) 0%,
+    var(--color-blue) 74%
+  );
   background-repeat: no-repeat;
   font-family: sans-serif;
   min-height: 100vh;
@@ -42,17 +53,17 @@ button {
   border: none;
   cursor: pointer;
   border-radius: 2px;
-  background-color: #adabab;
+  background-color: var(--dark-gray);
   transition: 200ms all ease-in-out;
 }
 
 button:hover {
-  background-color: #c2bdbddf;
+  background-color: var(--light-gray);
 }
 
 #input {
   border: none;
-  background-color: #adabab;
+  background-color: var(--dark-gray);
   height: 40px;
   width: 35%;
   margin-right: 32px;
@@ -63,6 +74,6 @@ button:hover {
 }
 
 #input:focus {
-  background-color: #c2bdbddf;
+  background-color: var(--light-gray);
   outline: none;
 }
